@@ -1,0 +1,5 @@
+#!/usr/bin/sh
+ram=$(free -m | awk 'NR==2{printf "%.1fgb", $3/1024 }')
+
+echo " $ram mem "
+

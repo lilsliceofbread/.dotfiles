@@ -1,0 +1,10 @@
+
+TEMP_DIR=/sys/devices/platform/coretemp.0/hwmon
+if [ -d "${TEMP_DIR}/hwmon1" ]; then
+	t=$(cat ${TEMP_DIR}/hwmon1/temp1_input)
+else
+	t=$(cat ${TEMP_DIR}/hwmon2/temp1_input)
+fi
+tmps="${t%000}°C"
+
+echo " $tmps temp "

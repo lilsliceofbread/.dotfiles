@@ -1,0 +1,6 @@
+configuration {
+	modi: "drun, run";
+	show-icons: true;
+	font: "Space Mono 16";
+}
+@theme "~/.config/rofi/theme.rasi"

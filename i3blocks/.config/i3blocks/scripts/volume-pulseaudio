@@ -1,0 +1,14 @@
+#!/bin/bash
+# Alsamixer
+# vol=$(awk -F"[][]" '/Left:/ { print $2 }' <(amixer sget Master | grep "\[on\]") | sed 's/%//')
+
+# Pulseaudio
+#vol=$(pacmd dump-volumes | awk 'NR==1{print $8}' | sed 's/\%//')
+
+# pulsemixer --get-mute | grep 0 > /dev/null && echo "<span foreground='#9f9f9f' size='large'></span> <span size='small' rise='2pt'>$(pulsemixer --get-volume | awk '{print $1}')%</span>" || echo "<span foreground='#9f9f9f' size='large'></span>"
+
+# better solution
+output=$(pulsemixer --get-volume)
+vol="${output%% *}"
+
+echo " $vol% vol "

@@ -1,0 +1,37 @@
+separator=false
+separator_block_width=3
+background=#3975BD
+color=#F8F8F7
+
+[cpu_usage]
+command=$HOME/.config/i3blocks/scripts/cpu_usage
+background=#4E31AA
+interval=2
+markup=pango
+
+[temperature]
+command=$HOME/.config/i3blocks/scripts/temperature 
+background=#4E31AA
+markup=pango
+interval=2
+
+[memory]
+command=$HOME/.config/i3blocks/scripts/memory
+background=#4E31AA
+markup=pango
+interval=2
+
+[gamma]
+command=echo " $(xrandr --verbose | grep -i brightness | awk '{print $2'}) gamma "
+markup=pango
+interval=1
+
+[volume-pulseaudio]
+command=$HOME/.config/i3blocks/scripts/volume-pulseaudio
+markup=pango
+interval=1
+
+[date]
+command=echo " $(date "+%d/%m/%Y %T") "
+markup=pango
+interval=1

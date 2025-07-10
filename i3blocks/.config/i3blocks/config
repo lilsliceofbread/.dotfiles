@@ -1,23 +1,23 @@
 separator=false
 separator_block_width=3
-background=#3975BD
+background=#54a0ff
 color=#F8F8F7
 
 [cpu_usage]
 command=$HOME/.config/i3blocks/scripts/cpu_usage
-background=#4E31AA
+#background=#4E31AA
 interval=2
 markup=pango
 
 [temperature]
 command=$HOME/.config/i3blocks/scripts/temperature 
-background=#4E31AA
+#background=#4E31AA
 markup=pango
 interval=2
 
 [memory]
 command=$HOME/.config/i3blocks/scripts/memory
-background=#4E31AA
+#background=#4E31AA
 markup=pango
 interval=2
 

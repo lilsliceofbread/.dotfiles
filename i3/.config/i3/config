@@ -177,11 +177,14 @@ bindsym $mod+r mode "resize"
 # my stuff                                                               #
 ##########################################################################
 
-set $bg #1e1e2e
-set $fg #4E31AA
-set $mg #3A1078
+set $bg #16161e
+#set $fg #4E31AA
+#set $mg #3A1078
+#set $ur #4E31AA
+set $fg #00d2d3
+set $mg #01a3a4
+set $ur #ee5253
 set $tx #F7F7F8
-set $ur #3795BD
 
 # window colour settings    border  background  text    indicator
 client.focused              $fg     $fg         $tx     $fg
@@ -192,7 +195,7 @@ client.urgent               $ur     $ur         $tx     $ur
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-	position top 
+	position bottom 
 	mode dock
 	tray_output primary
 	separator_symbol " "
@@ -204,10 +207,10 @@ bar {
      	 separator  $bg
 
          focused_workspace  $fg $fg $tx
-         active_workspace   $bg $bg $tx 
+         active_workspace   $mg $mg $tx 
          inactive_workspace $bg $bg $tx
-         urgent_workspace   $bg $ur $tx
-        }
+         urgent_workspace   $ur $ur $tx
+    }
 }
 
 #exec_always --no-startup-id /home/$USER/.config/i3/polybar.sh
@@ -252,8 +255,8 @@ exec --no-startup-id picom -b
 
 exec --no-startup-id xrandr --output HDMI-1 --primary
 
-# startup feh - desktop background program
-exec_always --no-startup-id feh --bg-fill /home/$USER/Wallpapers/oldwallpaper.webp
+# random desktop background
+exec_always --no-startup-id /home/$USER/.config/i3/random_background.sh
 
 default_border pixel 4 
 default_floating_border pixel 4
